@@ -1,12 +1,13 @@
-package com.ozgeakdas.credit.requests;
+package com.ozgeakdas.credit.requests.credit;
 
 import lombok.Data;
+import org.bson.types.ObjectId;
 
 @Data
-public class CreditCreateRequest {
-    private Long id;
+public class CreateCreditRequest {
+    private String id;
     private String result;
     private Integer limit;
-    private Long customerId;
+    private String customerId;
 
 }

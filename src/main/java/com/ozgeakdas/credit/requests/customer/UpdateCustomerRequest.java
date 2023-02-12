@@ -1,4 +1,4 @@
-package com.ozgeakdas.credit.requests;
+package com.ozgeakdas.credit.requests.customer;
 
 import lombok.Data;
 

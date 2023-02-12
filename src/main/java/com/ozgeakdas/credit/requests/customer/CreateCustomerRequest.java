@@ -1,6 +1,7 @@
-package com.ozgeakdas.credit.requests;
+package com.ozgeakdas.credit.requests.customer;
 
 import lombok.Data;
+import org.bson.types.ObjectId;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
