@@ -11,8 +11,7 @@ public class UpdateCustomerRequest {
     private String identityNumber;
     private String firstName;
     private String lastName;
-    private BigDecimal salary;
+    private Integer salary;
     private String phoneNumber;
     private LocalDate birthDate;
-    private BigDecimal deposit;
 }

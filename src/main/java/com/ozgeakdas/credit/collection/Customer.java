@@ -5,16 +5,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.bson.types.ObjectId;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -28,10 +25,9 @@ public class Customer {
     private String identityNumber;
     private String firstName;
     private String lastName;
-    private BigDecimal salary;
+    private Integer salary;
     private String phoneNumber;
     private LocalDate birthDate;
-    private BigDecimal deposit;
     private Integer creditScore;
     @OneToOne(fetch = FetchType.LAZY)
     @PrimaryKeyJoinColumn

@@ -3,6 +3,7 @@ package com.ozgeakdas.credit.controller;
 import com.ozgeakdas.credit.collection.Credit;
 import com.ozgeakdas.credit.requests.credit.CreateCreditRequest;
 import com.ozgeakdas.credit.requests.credit.UpdateCreditRequest;
+import com.ozgeakdas.credit.responses.CreditResultResponse;
 import com.ozgeakdas.credit.service.CreditService;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,6 +38,10 @@ public class CreditController {
     public void delete(@PathVariable String id) {
         creditService.delete(id);
 
+    }
+    @GetMapping("/getResult/{id}")
+    public CreditResultResponse getResult(@PathVariable String id){
+        return creditService.getResult(id);
     }
 
 }

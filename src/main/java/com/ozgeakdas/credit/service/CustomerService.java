@@ -15,6 +15,7 @@ import java.util.List;
 public class CustomerService {
     CustomerRepository customerRepository;
     CustomerMapper mapper;
+    CreditScoreService creditScoreService;
 
 
     public List<Customer> getAll() {
@@ -28,6 +29,7 @@ public class CustomerService {
 
     public void add(CreateCustomerRequest createCustomerRequest) {
         Customer customer=mapper.toCustomer(createCustomerRequest);
+        customer.setCreditScore(creditScoreService.generateCreditScore());
         customerRepository.save(customer);
     }
 
