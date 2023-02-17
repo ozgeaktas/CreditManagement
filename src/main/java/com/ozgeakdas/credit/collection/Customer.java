@@ -3,6 +3,7 @@ package com.ozgeakdas.credit.collection;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.OnDelete;
@@ -17,6 +18,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 @Document(collection = "customer")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Customer {

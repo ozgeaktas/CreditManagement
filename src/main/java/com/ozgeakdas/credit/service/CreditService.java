@@ -3,12 +3,14 @@ package com.ozgeakdas.credit.service;
 import com.ozgeakdas.credit.collection.Credit;
 
 import com.ozgeakdas.credit.collection.Customer;
+import com.ozgeakdas.credit.exceptions.NotFoundException;
 import com.ozgeakdas.credit.mapper.CreditMapper;
 import com.ozgeakdas.credit.repository.CreditRepository;
 import com.ozgeakdas.credit.requests.credit.CreateCreditRequest;
 import com.ozgeakdas.credit.requests.credit.UpdateCreditRequest;
 import com.ozgeakdas.credit.responses.CreditResultResponse;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -16,6 +18,7 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
+@Slf4j
 public class CreditService {
     CreditRepository creditRepository;
     CustomerService customerService;
@@ -28,18 +31,21 @@ public class CreditService {
     }
 
     public Credit getById(String id) {
-        return creditRepository.findById(id).orElse(null);
+
+        return creditRepository.findById(id).orElseThrow(() -> new NotFoundException("Credit"));
     }
 
     public void add(CreateCreditRequest createCreditRequest) {
         Credit credit=mapper.toCredit(createCreditRequest);
         creditRepository.save(credit);
+        log.info("Success adding credit.");
     }
 
     public void update(UpdateCreditRequest updateCreditRequest, String id) {
         Credit credit=creditRepository.findById(id).get();
         mapper.update(credit,updateCreditRequest);
         creditRepository.save(credit);
+        log.info("Success update.");
     }
 
     public void delete(String id) {
