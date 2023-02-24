@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/credits")
+@RequestMapping("/api/credit")
 public class CreditController {
     private final CreditService creditService;
 
