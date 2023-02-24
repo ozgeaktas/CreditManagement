@@ -37,7 +37,7 @@ Spring Boot Project for DefineX
 ## Swagger Endpoints
 
 </hr>
-<li> http://localhost:8080/swagger-ui/index.html#/  </li>
+http://localhost:8080/swagger-ui/index.html#/ 
 
 ## Technology Stack: 
 
@@ -47,6 +47,8 @@ Spring Boot Project for DefineX
 <li> Spring Boot </li>
 <li> MongoDb </li>
 <li> Swagger </li>
+<li> Mapstruct </li>
 <li> JUnit and Mockito /li>
 <li> N-Layered Architecture </li>
+<li> Request and Response structure</li>
 
