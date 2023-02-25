@@ -48,7 +48,7 @@ http://localhost:8080/swagger-ui/index.html#/
 <li> MongoDb </li>
 <li> Swagger </li>
 <li> Mapstruct </li>
-<li> JUnit and Mockito /li>
+<li> JUnit and Mockito </li>
 <li> N-Layered Architecture </li>
 <li> Request and Response structure</li>
 
