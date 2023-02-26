@@ -37,7 +37,8 @@ Spring Boot Project for DefineX
 ## Swagger Endpoints
 
 </hr>
-http://localhost:8080/swagger-ui/index.html#/ 
+
+http://localhost:8080/swagger-ui/index.html#/
 
 ## Technology Stack: 
 
